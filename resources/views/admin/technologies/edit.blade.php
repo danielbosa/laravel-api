@@ -35,7 +35,7 @@
 
             <div class="mb-3">
                 <label for="icon" class="form-label">Icon</label>
-                <input type="file" accept="image/*" class="form-control @error('icon') is-invalid @enderror" id="image" name="icon" value="{{ old('icon', $technology->icon) }}" maxlength="255">
+                <input type="file" accept="image/*" class="form-control @error('icon') is-invalid @enderror" id="icon" name="icon" value="{{ old('icon', $technology->icon) }}" maxlength="255">
                 @error('icon')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
