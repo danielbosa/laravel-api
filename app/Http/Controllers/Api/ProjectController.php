@@ -13,29 +13,35 @@ class ProjectController extends Controller
         $projects = Project::with('type')->get();
         //dd($projects);
         return response()->json([
-            'success' => true,
+            'status' => 'success',
+            'message' => 'Ok',
             'results' => $projects
-        ]);
+        ], 200);
     }
 
     public function show($slug){
         //query with slug
-        $project = Project::where('slug',$slug)
+        $project = Project::where('slug', $slug)
         //eager loading of relationships; otherwise, no info about the relationship! 
             //there are other ways to eager load
-        ->with('type','technology')
+        ->with('type','technologies')
         //take the first result
         ->first();
         if($project){
             return response()->json([
-                'success' => true,
+                'status' => 'success',
+                'message' => 'Ok',
                 'results' => $project
-            ]);
+            ],
+            //code of success
+                200);
         }else{
             return response()->json([
-                'success' => false,
-                'results' => 'Project not found'
-            ]);
+                'status' => 'error',
+                'message' => 'Error',
+            ],
+            //code of error
+                404);
         }
         
     }

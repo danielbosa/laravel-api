@@ -17,7 +17,7 @@ class Technology extends Model
     {
         $slug = Str::slug($name, '-');
         $count = 1;
-        while(Project::where('slug', $slug)->first()){
+        while(Technology::where('slug', $slug)->first()){
             $slug = Str::slug($name, '-') . "-{$count}";
             $count++;
         }
