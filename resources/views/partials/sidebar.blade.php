@@ -1,5 +1,11 @@
 <nav id="sidebar">
     <ul class="">
+        <li class="nav-link ">
+            <a href="http://localhost:5174" class="nav-link ">
+                <i class="fa-solid fa-house"></i>
+                <span> MyPortfolio</span>
+            </a>
+        </li>
         <li class="{{Route::currentRouteName() == 'home' ? 'active' : ''}}">
             <a href="/" class="nav-link ">
                 <i class="fa-solid fa-house"></i>
