@@ -6,12 +6,12 @@
                 <span> MyPortfolio</span>
             </a>
         </li>
-        <li class="{{Route::currentRouteName() == 'home' ? 'active' : ''}}">
+        {{-- <li class="{{Route::currentRouteName() == 'home' ? 'active' : ''}}">
             <a href="/" class="nav-link ">
                 <i class="fa-solid fa-house"></i>
                 <span> Home</span>
             </a>
-        </li>
+        </li> --}}
         <li class="{{Route::currentRouteName() == 'admin.dashboard' ? 'active' : ''}}">
             <a href="/admin" class="nav-link">
                 <i class="fa-solid fa-chart-simple"></i>
@@ -26,7 +26,7 @@
         </li>
         <li class="{{Route::currentRouteName() == 'admin.types.index' ? 'active' : ''}}">
             <a href="/admin/types" class="nav-link">
-                <i class="fa-solid fa-signal"></i>
+                <i class="fa-solid fa-layer-group"></i>
                 <span>Types</span>
             </a>
         </li>
